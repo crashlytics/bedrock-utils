@@ -65,7 +65,7 @@ gulp.task 'watch', (cb) ->
 # ------------------------------------------------------------------------------
 # Publish
 # ------------------------------------------------------------------------------
-gulp.task 'publish', (cb) ->
+gulp.task 'publish', ['compile'], (cb) ->
   spawn = require('child_process').spawn
   spawn('npm', ['publish'], stdio: 'inherit').on 'close', cb
 

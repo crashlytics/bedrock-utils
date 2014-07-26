@@ -1,8 +1,9 @@
 _ = require 'underscore'
-deepExtend = require('underscore-deep-extend') _
 glob = require 'glob'
 path = require 'path'
 fs = require 'fs'
+
+_.mixin deepExtend: require('underscore-deep-extend')(_)
 
 initialize = (queries, options = {}) ->
   # Ensure we have an array or string for the directory name
@@ -27,7 +28,7 @@ initialize = (queries, options = {}) ->
     delete attributes.initialize
     files = [attributes].concat files
 
-  configs = deepExtend files...
+  configs = _.deepExtend files...
   deepFreeze configs unless options.deepFreeze? and not options.deepFreeze
 
   configs
