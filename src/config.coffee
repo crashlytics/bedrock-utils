@@ -20,7 +20,7 @@ initialize = (queries, options = {}) ->
   _.defaults options, defaults
   options.debug ?= if options.env is 'development' then true else false
 
-  [errors, files] = queryAndReadFiles queries, queries
+  [errors, files] = queryAndReadFiles queries, options
   console.error errors... if errors and options.debug
 
   if options.inMemory
