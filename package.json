@@ -12,7 +12,7 @@
     "url": "git@github.com:crashlytics/bedrock-utils"
   },
   "author": "Patrick Camacho",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "bugs": {
     "url": "https://github.com/crashlytics/bedrock-utils/issues"
   },
